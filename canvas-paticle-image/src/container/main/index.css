@@ -1,0 +1,39 @@
+div{
+    box-sizing: border-box;
+}
+.main-body {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #1b1919;
+    z-index: 100;
+}
+.main-container {
+    width: 100%;
+    height: 90vh;
+}
+.images-list {
+    width: 100%;
+    height: 10vh;
+    padding: 10px 15px 9px;
+    background: #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+}
+.images-list::-webkit-scrollbar{
+    display: none
+}
+.image {
+    flex: 1; 
+    object-fit: contain;
+    width: 20%;
+    height: 100%;
+    padding-bottom: 4px;
+    margin: 0 5px;
+}
+.image-actived {
+    border-bottom: 2px solid #f15648
+}
