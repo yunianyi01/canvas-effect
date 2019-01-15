@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { HashRouter as Router,Route } from 'react-router-dom';
+import { HashRouter as Router,Route, Redirect} from 'react-router-dom';
 import Main from './container/main';
 import './App.css';
 
@@ -11,7 +11,10 @@ class App extends Component {
     return (
       <Router>
       	<div>
-          <Route path='/home' exact component={Main}/>
+        <Route path='/home' component={Main}/>
+          <Route path='/' exact render={() => (
+          <Redirect to="/home"/>
+        )}/>
       	</div>
       </Router>
     );
