@@ -89,7 +89,7 @@ export default class Request extends Component {
 
   imageChip(ctx, imgW, imgH) {
     let max = Math.max(imgW, imgH)
-    this.density = Math.floor(max / 70)
+    this.density = Math.floor(max / 80)
     const { density, targetPosX, targetPosY, canvasBoxWidth, canvasBoxHeight } = this;
     for (let w = 0; w < (imgW / density); w++) {
       this.fragList[w] = []
